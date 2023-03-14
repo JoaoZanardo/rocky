@@ -1,5 +1,5 @@
 import json2csv from "json2csv";
 
-const jsonToCsv = (json: JSON): string => {
+export const jsonToCsv = (json: any): string => {
     return json2csv.parse(json)
 }
