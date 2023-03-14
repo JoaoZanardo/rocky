@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node dist/src/index"
+    "start": "node dist/index",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
