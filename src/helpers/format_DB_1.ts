@@ -6,16 +6,7 @@ type DB = {
     nome: string;
 }[]
 
-type FormattedDB = {
-    data: string;
-    id_marca_: number;
-    vendas: number;
-    valor_do_veiculo: number;
-    nome: string;
-}[]
-
-export const formatDB1 = (db: DB): FormattedDB => {
-    let formattedDb: FormattedDB = [];
+export const formatDB1 = (db: DB): DB => {
     for (const car of db) {
         for (const letter of car.nome) {
             if (letter === 'æ') {
@@ -27,8 +18,7 @@ export const formatDB1 = (db: DB): FormattedDB => {
         }
         
         car.vendas = Number(car.vendas);
-        formattedDb.push({...car, vendas: car.vendas as number});
     }
-
-    return formattedDb;
+    
+    return db;
 };
