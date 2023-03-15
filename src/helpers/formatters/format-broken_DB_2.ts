@@ -10,10 +10,16 @@ export type Brand = {
     marca: string;
 }
 
-export const formatBrokenDB2 = (db: BrokenDB2): Brand[] => {
-    for (const brand of db) {
+export const formatBrokenDB2 = (brokenDB2: BrokenDB2): Brand[] => {
+    const brandsDB: Brand[] = [];
+
+    for (const brand of brokenDB2) {
         brand.marca = formatCorruptedString(brand.marca);
+        brandsDB.push({
+            id_marca: brand.id_marca,
+            marca: brand.marca
+        });
     }
 
-    return db;
+    return brokenDB2;
 };
