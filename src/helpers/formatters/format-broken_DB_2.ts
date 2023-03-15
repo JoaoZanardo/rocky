@@ -21,5 +21,5 @@ export const formatBrokenDB2 = (brokenDB2: BrokenDB2): Brand[] => {
         });
     }
 
-    return brokenDB2;
+    return brandsDB;
 };
