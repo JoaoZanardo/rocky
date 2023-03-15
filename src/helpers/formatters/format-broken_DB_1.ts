@@ -1,3 +1,5 @@
+import { formatCorruptedString } from "./format-corrupted-string";
+
 export type BrokenDB1 = {
     data: string;
     id_marca_: number;
@@ -18,15 +20,7 @@ export const formatBrokenDB1 = (brokenDB1: BrokenDB1): Car[] => {
     const carsDB: Car[] = [];
 
     for (const car of brokenDB1) {
-        for (const letter of car.nome) {
-            if (letter === 'æ') {
-                car.nome = car.nome.replace('æ', 'a');
-            }
-            if (letter === "ø") {
-                car.nome = car.nome.replace('ø', 'o');
-            }
-        }
-        
+        car.nome = formatCorruptedString(car.nome);
         car.vendas = Number(car.vendas);
 
         carsDB.push({
