@@ -14,9 +14,8 @@ export type Car = {
     valor_do_veiculo: number;
 }
 
-
-export const formatDB1 = (brokenDB1: BrokenDB1): Car[] => {
-    let carsDB: Car[] = [];
+export const formatBrokenDB1 = (brokenDB1: BrokenDB1): Car[] => {
+    const carsDB: Car[] = [];
 
     for (const car of brokenDB1) {
         for (const letter of car.nome) {

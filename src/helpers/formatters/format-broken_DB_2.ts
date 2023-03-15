@@ -8,7 +8,7 @@ export type Brand = {
     marca: string;
 }
 
-export const formatDB2 = (db: BrokenDB2): Brand[] => {
+export const formatBrokenDB2 = (db: BrokenDB2): Brand[] => {
     for (const car of db) {
         for (const letter of car.marca) {
             if (letter === 'æ') {
