@@ -1,3 +1,3 @@
-export * from './format_DB_1';
-export * from './formart_DB_2';
+export * from './format-broken_DB_1';
+export * from './format-broken_DB_2';
 export * from './formatter';
