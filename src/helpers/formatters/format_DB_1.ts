@@ -1,4 +1,4 @@
-type DB = {
+export type DB1 = {
     data: string;
     id_marca_: number;
     vendas: number | string;
@@ -6,7 +6,7 @@ type DB = {
     nome: string;
 }[]
 
-export const formatDB1 = (db: DB): DB => {
+export const formatDB1 = (db: DB1): DB1 => {
     for (const car of db) {
         for (const letter of car.nome) {
             if (letter === 'æ') {

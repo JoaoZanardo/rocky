@@ -1,9 +1,9 @@
-type DB = {
+export type DB2 = {
     id_marca: number;
     marca: string;
 }[]
 
-export const formatDB2 = (db: DB): DB => {
+export const formatDB2 = (db: DB2): DB2 => {
     for (const car of db) {
         for (const letter of car.marca) {
             if (letter === 'æ') {
