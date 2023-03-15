@@ -6,7 +6,7 @@ export type BrokenDB1 = {
     nome: string;
 }[]
 
-type Car = {
+export type Car = {
     data: string;
     id_marca_: number;
     nome: string;

@@ -3,7 +3,7 @@ export type BrokenDB2 = {
     marca: string;
 }[]
 
-type Brand = {
+export type Brand = {
     id_marca: number;
     marca: string;
 }

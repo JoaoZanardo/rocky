@@ -1,9 +1,9 @@
-import { BrokenDB1, formatDB1 } from "./format-broken_DB_1";
-import { BrokenDB2, formatDB2 } from "./format-broken_DB_2";
+import { BrokenDB1, Car, formatDB1 } from "./format-broken_DB_1";
+import { Brand, BrokenDB2, formatDB2 } from "./format-broken_DB_2";
 
 type FormatterReturn = { 
-    carsDB: BrokenDB1,
-    brandsDB: BrokenDB2 
+    carsDB: Car[],
+    brandsDB: Brand[] 
 }
 
 export const formatter = (db1: BrokenDB1, db2: BrokenDB2): FormatterReturn => {
