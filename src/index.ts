@@ -9,4 +9,4 @@ const finalDB = join(carsDB, brandsDB);
 writer(`${__dirname}/data/cars_database.json`, JSON.stringify(carsDB));
 writer(`${__dirname}/data/brands_database.json`, JSON.stringify(brandsDB));
 
-writer(`${os.homedir()}/Desktop/cars.csv`, jsonToCsv(finalDB));
+writer(`${os.homedir()}/Desktop/database.csv`, jsonToCsv(finalDB));
