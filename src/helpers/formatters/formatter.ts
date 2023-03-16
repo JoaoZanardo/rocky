@@ -6,9 +6,9 @@ type FormatterReturn = {
     brandsDB: Brand[] 
 }
 
-export const formatter = (db1: BrokenDB1, db2: BrokenDB2): FormatterReturn => {
-    const carsDB = formatBrokenDB1(db1);
-    const brandsDB = formatBrokenDB2(db2);
+export const formatter = (brokenDB1: BrokenDB1, brokenDB2: BrokenDB2): FormatterReturn => {
+    const carsDB = formatBrokenDB1(brokenDB1);
+    const brandsDB = formatBrokenDB2(brokenDB2);
 
     return {carsDB, brandsDB};
 };
