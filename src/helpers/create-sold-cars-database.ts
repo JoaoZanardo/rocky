@@ -1,14 +1,14 @@
 import { FinalDB } from "./join";
 
-type SoldCars = {
+type SoldCar = {
     marca: string;
     nome: string;
     vendas: number;
     total: number;
 }
 
-export const createSoldCarsDB = (finalDB: FinalDB): SoldCars[] => {
-    const soldCars: SoldCars[] = [];
+export const createSoldCarsDB = (finalDB: FinalDB): SoldCar[] => {
+    const soldCars: SoldCar[] = [];
     for (const car of finalDB) {
         let exists = false;
         if (soldCars.length) {
